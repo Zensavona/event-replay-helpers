@@ -75,18 +75,15 @@ var rehydrateSerialisedEvent = function (event) {
         };
     }
 };
-var serialiseMouseEvent = function (event, startTimeStamp) {
-    if (startTimeStamp === void 0) { startTimeStamp = 0; }
-    return ({
-        type: event.type,
-        screenX: event.screenX,
-        screenY: event.screenY,
-        clientX: event.clientX,
-        clientY: event.clientY,
-        timeStamp: Math.round(event.timeStamp - startTimeStamp),
-        xpath: getXPathFromElement(event.target)
-    });
-};
+var serialiseMouseEvent = function (event, startTimeStamp) { return ({
+    type: event.type,
+    screenX: event.screenX,
+    screenY: event.screenY,
+    clientX: event.clientX,
+    clientY: event.clientY,
+    timeStamp: Math.round(event.timeStamp - startTimeStamp),
+    xpath: getXPathFromElement(event.target)
+}); };
 var serialiseTouchEvent = function (event, startTimeStamp) { return ({
     type: event.type,
     screenX: Math.round(event.changedTouches[0].screenX),
@@ -97,6 +94,7 @@ var serialiseTouchEvent = function (event, startTimeStamp) { return ({
     xpath: getXPathFromElement(event.target)
 }); };
 var serialiseEvent = function (e, startTimeStamp) {
+    if (startTimeStamp === void 0) { startTimeStamp = 0; }
     if (isTouchEvent(e)) {
         return serialiseTouchEvent(e, startTimeStamp);
     }

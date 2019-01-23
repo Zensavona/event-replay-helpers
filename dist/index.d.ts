@@ -9,5 +9,9 @@ export interface SerialisedEvent {
 }
 export declare const isTouchEvent: (event: MouseEvent | TouchEvent) => event is TouchEvent;
 export declare const isMouseEvent: (event: MouseEvent | TouchEvent) => event is MouseEvent;
-export declare const rehydrateSerialisedEvent: (event: SerialisedEvent) => (() => TouchEvent) | (() => MouseEvent);
-export declare const serialiseEvent: (e: MouseEvent | TouchEvent, startTimeStamp: number) => SerialisedEvent;
+interface ReturnFunction<EventType> {
+    (): EventType;
+}
+export declare const rehydrateSerialisedEvent: (event: SerialisedEvent) => ReturnFunction<MouseEvent | TouchEvent>;
+export declare const serialiseEvent: (e: MouseEvent | TouchEvent, startTimeStamp?: number) => SerialisedEvent;
+export {};
