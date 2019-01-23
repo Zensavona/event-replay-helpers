@@ -1,0 +1,25 @@
+{
+  "name": "event-replay-helpers",
+  "version": "1.0.0",
+  "description": "Helpers for serialising and rehydrating JavaScript mouse and touch events",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw"
+  },
+  "author": "Zen Savona <z@zen.id.au>",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.1.2",
+    "rollup-plugin-typescript2": "^0.19.2",
+    "typescript": "^3.2.4"
+  }
+}
