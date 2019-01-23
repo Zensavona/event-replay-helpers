@@ -25,3 +25,5 @@ document.addEventListener('click', (e) => {
   }, 1000)
 })
 ```
+
+To better understand how it works and how to use it, just have a look at the `index.ts` - it's only ~130 lines of code.
