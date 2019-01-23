@@ -4,7 +4,7 @@ Ever needed to save JavaScript (mouse/touch) events to the server to be replayed
 
 `yarn add event-replay-helpers`
 
--> ![alt Demo GIF](https://i.imgur.com/jeKfoZO.gif) <-
+->![alt Demo GIF](https://i.imgur.com/jeKfoZO.gif)<-
 
 Currently only works for `mousemove`, `mousedown`, `mouseup`, `mouseover`, `click`, `touchstart`, `touchmove`, and `touchend` for potential security reasons - I will deal with this soon (maybe)
 
